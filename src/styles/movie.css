@@ -1,0 +1,160 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #040714;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+.movie-header {
+    padding: 16px 24px;
+}
+
+.back-button {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hero */
+.movie-hero {
+    height: 70vh;
+    background:
+        linear-gradient(to top, #040714, rgba(0, 0, 0, 0.4)),
+        url('../images/fundo_rei_leao.png') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.movie-hero__content {
+    padding: 0 5vw;
+    max-width: 600px;
+    margin-right: 5vw;
+    text-align: right;
+}
+
+.movie-title {
+    font-size: 48px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.movie-subtitle {
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: #e0e0e0;
+}
+
+/* Botão */
+.button {
+    padding: 14px 28px;
+    background-color: #0063e5;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #0051b5;
+}
+
+/* Player */
+.movie-player {
+    display: none; /* inicialmente oculto */
+    padding: 48px 5vw;
+    background-color: #000000; /* fundo escuro para o player */
+}
+
+.movie-player__container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 56.25%; /* 16:9 */
+}
+
+.movie-player__container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Informações */
+.movie-info {
+    padding: 48px 5vw;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.movie-info h2 {
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+
+.movie-info p {
+    margin-bottom: 24px;
+}
+
+.movie-details {
+    list-style: none; /* remove bullets */
+    padding-left: 0;
+}
+
+.movie-details li {
+    margin-bottom: 8px;
+}
+
+/* Galeria */
+.movie-gallery {
+    padding: 48px 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .movie-hero {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .movie-hero__content {
+        margin: 0;
+        max-width: 90%;
+    }
+
+    .movie-title {
+        font-size: 36px;
+    }
+
+    .movie-subtitle {
+        font-size: 18px;
+    }
+}
